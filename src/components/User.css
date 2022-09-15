@@ -1,0 +1,19 @@
+.User {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 15px;
+  }
+  
+  .User img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .User__actions {
+    margin-top: 10px;
+  }
+  
+  .User__actions button {
+    margin-left: 10px;
+  }

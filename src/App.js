@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./App.css";
+import ListUsers from "./components/ListUsers";
+import staticUsers from "./staticUsers";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+   staticUsers: staticUsers,
+  };
+
+  handleOnDelete =(userId) =>{
+    
+    this.setState({
+      // e shikon dhe i ndryshon userat me ata qe sjan me id e zgjedhur per me fshi
+      staticUsers: this.state.staticUsers.filter((user) => user.id !== userId),
+    })
+  }
+  render() {
+    const {staticUsers} =this.state;
+    return (
+      <div className="App">
+        <ListUsers title="GitHub Users" users={[]} />
+        <ListUsers
+        title="Static Users"
+        users={staticUsers}
+        onDelete={this.handleOnDelete}/>
+        <ListUsers title="Empty List" users={[]}
+        />
+      </div>
+    );
+  }
 }
-
 export default App;

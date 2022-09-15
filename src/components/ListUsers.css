@@ -1,0 +1,13 @@
+.ListUsers {
+    margin: 20px 0;
+  }
+  
+  .ListUsers__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .ListUsers__users {
+    display: flex;
+    justify-content: center;
+  }
