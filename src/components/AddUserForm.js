@@ -6,15 +6,23 @@ export default class AddUserForm extends Component {
   };
 
   handleOnChange = (e) => {
+    
     this.setState({
         searchValue:e.target.value,
     })
-    // console.log(this.state.searchValue)
+  
   };
   handelOnSubmit=(e)=>{
+    
     e.preventDefault();
-// console.log(this.state.searchValue)
+    if (!this.state.searchValue) {
+        alert(` Name is empty `);
+        return;
+      }
+
+
 this.props.onSubmit(this.state.searchValue);
+
 
   }
 
