@@ -1,0 +1,13 @@
+.AddUserForm {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+  }
+  
+  .AddUserForm__form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .AddUserForm button {
+    margin-left: 20px;
+  }

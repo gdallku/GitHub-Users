@@ -29,4 +29,5 @@ export default function ListUsers(props) {
 ListUsers.propTypes = {
   title: PropTypes.string.isRequired,
   users: PropTypes.arrayOf(UserType),
+  onDelete:PropTypes.func,
 };

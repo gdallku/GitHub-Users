@@ -7,6 +7,7 @@ export default function User(props) {
   if (!user) {
     return null;
   }
+  
 
   return (
     <div className="User">
@@ -35,4 +36,5 @@ export const UserType = PropTypes.shape({
 
 User.propTypes = {
   user: UserType.isRequired,
+  onDelete: PropTypes.func
 };
